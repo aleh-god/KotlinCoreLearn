@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="kotlinc">
+    <ANNOTATIONS>
+      <root url="file://C:/kotlinc" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://C:/kotlinc" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://C:/kotlinc" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="file://C:/kotlinc" />
+    </NATIVE>
+    <SOURCES>
+      <root url="file://C:/kotlinc" />
+    </SOURCES>
+    <jarDirectory url="file://C:/kotlinc" recursive="false" />
+    <jarDirectory url="file://C:/kotlinc" recursive="false" type="SOURCES" />
+  </library>
+</component>
