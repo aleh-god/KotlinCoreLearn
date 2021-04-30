@@ -22,6 +22,7 @@ class ArrayLearn: CoreLearn {
         var n = numbers[1]  // получаем второй элемент  n=2
         numbers[2] = 7      // переустанавливаем третий элемент
 
+        // Можно проверить на вхождение
         println(4 in numbers)       // true
         println(2 !in numbers)      // false
 
@@ -40,6 +41,9 @@ class ArrayLearn: CoreLearn {
 
         // Перебор массивов
 
+        // Массивы можно помещать в цикл for
+        println("цикл for")
+
         for(row in table){
             // Каждый из элементов двухмерного массива сам представляет массив
             for(cell in row){
@@ -49,10 +53,12 @@ class ArrayLearn: CoreLearn {
         }
 
         val phones: Array<String> = arrayOf("Galaxy S8", "iPhone X", "Motorola C350")
+
         for(phone in phones){
             println(phone)
         }
 
-
+        println("функция .forEach")
+        phones.forEach { cell -> print("$cell \t") }
     }
 }
