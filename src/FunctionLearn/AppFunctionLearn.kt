@@ -1,4 +1,4 @@
-package functionLearn
+package FunctionLearn
 
 fun main(args: Array<String>){
     println("Hello FunctionLearn")
