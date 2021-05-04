@@ -1,4 +1,4 @@
-package functionLearn
+package FunctionLearn
 
 class FunctionsParameters: FunctionLearn {
     /*

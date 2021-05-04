@@ -1,4 +1,4 @@
-package functionLearn
+package FunctionLearn
 
 class LambdaExpressions : FunctionLearn {
     override fun showResult() {
