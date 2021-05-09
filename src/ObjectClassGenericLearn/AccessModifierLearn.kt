@@ -1,4 +1,4 @@
-package ObjectOpLearn
+package ObjectClassGenericLearn
 /*
 В Kotlin есть следующие модификаторы видимости:
 

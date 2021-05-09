@@ -1,4 +1,4 @@
-package ObjectOpLearn
+package ObjectClassGenericLearn
 
 // Для определения пакета применяется ключевое слово package, после которого идет имя пакета:
 //package account

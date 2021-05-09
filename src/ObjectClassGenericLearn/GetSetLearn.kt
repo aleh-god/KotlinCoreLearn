@@ -1,4 +1,4 @@
-package ObjectOpLearn
+package ObjectClassGenericLearn
 
 class GetSetLearn {
     // Свойства

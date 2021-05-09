@@ -1,4 +1,4 @@
-package ObjectOpLearn
+package ObjectClassGenericLearn
 
 class PersonShortSyntax(private var name: String = "Jesus", var age: Int = 33)
 {

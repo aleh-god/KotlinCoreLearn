@@ -1,6 +1,6 @@
-package ObjectOpLearn
+package ObjectClassGenericLearn
 
-class NestedClassesLearn {
+class NestedClassLearn {
 
     private var id: Int = 0
     get() = ++field
