@@ -1,4 +1,4 @@
-package ObjectOpLearn
+package ObjectClassGenericLearn
 
 fun main(args: Array<String>){ // Функция main в Kotlin не помещается в отдельных класс, а всегда определяется вне какого-либо класса.
 
@@ -97,15 +97,15 @@ fun main(args: Array<String>){ // Функция main в Kotlin не помещ�
 
     println("!!!Nested and inner classes!!!")
     // Для обращения к вложенному классу надо использовать имя внешнего класса.
-    val nested = NestedClassesLearn.NestedClass()
+    val nested = NestedClassLearn.NestedClass()
     nested.changeId()
     nested.call()
 
-    NestedClassesLearn.NestedClass().changeId()
-    NestedClassesLearn.NestedClass().call()
+    NestedClassLearn.NestedClass().changeId()
+    NestedClassLearn.NestedClass().call()
 
     // Если мы хотим использовать объект вложенного класса, то необходимо создать объект внешнего класса:
-    val inner = NestedClassesLearn().InnerClass()
+    val inner = NestedClassLearn().InnerClass()
     inner.changeId()
     inner.call()
 
@@ -115,7 +115,7 @@ fun main(args: Array<String>){ // Функция main в Kotlin не помещ�
     inner.changeId()
     inner.call()
 
-    NestedClassesLearn().InnerClass().changeId()
-    NestedClassesLearn().InnerClass().call()
+    NestedClassLearn().InnerClass().changeId()
+    NestedClassLearn().InnerClass().call()
 
 }
