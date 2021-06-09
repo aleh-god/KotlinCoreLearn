@@ -83,7 +83,8 @@ fun main(args: Array<String>){
     //При вызове функции action мы можем передать для ее третьего параметра лямбда-выражение, которое соответствует этому параметру по типу:
     lesson.highOrderFunction(5, 3, add)
     lesson.highOrderFunction(5, 3, multiply)
-    lesson.highOrderFunction(5, 3, {x: Int, y: Int -> x -y})
+    lesson.highOrderFunction(5, 3, { x: Int, y: Int -> x -y } ) // Если лямбда последний параметр, то его можно вынести за ()
+    lesson.highOrderFunction(5, 3) { x: Int, y: Int -> x - y }
 
     // Возвращение функции из функции
 
@@ -105,12 +106,17 @@ fun main(args: Array<String>){
         return x + y
     }
 
+    // Если нет входных параметров, и выход - Юнит, то лишние элементы конструкции можно опустить и оставить лишь блок исполняемого кода
+    { print("Hello") }()    // запуск кода через ()
+
     lesson = FunctionsType()
     // Функция operation принимает три параметра.
     // Первые два параметра - числа, а третий параметр - функция тип (Int, Int) -> Int), которая выполняет некоторые действия над этими числами.
     // Передача анонимной функции в данном случае аналогична передачи лямбда-выражения
     lesson.operation(9,5, fun(x: Int, y: Int): Int { return x + y })   // 14
-    lesson.operation(9,5, fun(x: Int, y: Int): Int = x - y)            // 4
+    lesson.operation(9,5, fun(x: Int, y: Int): Int = x - y )            // 4
+    lesson.operation(9,5, { x, y -> x - y } )            // 4
+    lesson.operation(9,5) { x, y -> x - y }            // Если лямбда последний параметр, то его можно вынести за ()
 
     //lesson.showResult()
 

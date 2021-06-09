@@ -10,6 +10,11 @@ List <T> хранит элементы в указанном порядке и �
 Индексы начинаются с нуля - индекса первого элемента - и переходят к lastIndex, который равен (list.size - 1).
  */
 
+    val anyList2 = listOf("bezkoder.com", 2019, null)
+    // [bezkoder.com, 2019, null]
+    val anyList3 = listOfNotNull("bezkoder.com", 2019, null)
+    // [bezkoder.com, 2019]
+
     var numbers = listOf("one", "two", "three", "four")
     println("Number of elements: ${numbers.size}")
     println("Third element: ${numbers.get(2)}")
@@ -343,6 +348,17 @@ In Kotlin, the default implementation of List is ArrayList which you can think o
 
     println(emptyListA.elementAtOrElse(0) { "no int" }) // no int
     println(emptyListA.elementAtOrNull(0)) // null
+
+    val dangerList: List<String>?  = listOf("Jesus", "Abraham")
+    val danger: List<String>  = listOf("Jesus", "Abraham")
+    // dangerList.forEach { print(it) } ошибка компиляции, экс-функции не могут работать с null
+    dangerList.orEmpty().forEach { print(it) } // Если null, то возвращает пустой список
+    print(danger.getOrElse(0) { "Adam" } ) // Если нету значения, то выполняется лямбда функция, которая возвращает литерал
+    danger
+        .takeIf { it.first() == "S" } // если false, то возвращает null
+        ?.let { print("result = $it") }
+
+
 
 }
 
