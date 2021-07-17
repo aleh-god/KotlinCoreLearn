@@ -11,5 +11,7 @@
     <orderEntry type="library" name="kotlinc" level="project" />
     <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" name="org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.1" level="project" />
+    <orderEntry type="library" name="kotlinx" level="project" />
   </component>
 </module>

@@ -1,11 +1,10 @@
 <component name="libraryTable">
-  <library name="lib" type="kotlin.js">
+  <library name="kotlinx" type="kotlin.js">
     <CLASSES>
-      <root url="file://C:/kotlinc/lib" />
+      <root url="file://$PROJECT_DIR$/../java install/kotlinx.coroutines-master" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="file://C:/kotlinc/lib" />
       <root url="file://$PROJECT_DIR$/../java install/kotlinx.coroutines-master" />
       <root url="file://$PROJECT_DIR$/../java install/kotlinx.coroutines-master/benchmarks/src/jmh/java" />
     </SOURCES>

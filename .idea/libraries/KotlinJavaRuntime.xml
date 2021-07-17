@@ -1,19 +1,36 @@
 <component name="libraryTable">
   <library name="KotlinJavaRuntime">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/lib/kotlinx-coroutines-core-1.5.1.jar!/" />
+    </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/kotlin-reflect.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/kotlin-test.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-jdk7.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-jdk8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlinx-coroutines-core-1.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlinx-coroutines-core-1.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../java install/IntelliJ IDEA Ultimate 2020.3.2.win/lib/kotlinx-coroutines-jdk8.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/lib/kotlinx-coroutines-core-1.5.1.jar!/" />
+    </JAVADOC>
+    <NATIVE>
+      <root url="jar://$PROJECT_DIR$/lib/kotlinx-coroutines-core-1.5.1.jar!/" />
+    </NATIVE>
     <SOURCES>
       <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/kotlin-reflect-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/kotlin-test-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-jdk7-sources.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/kotlin-stdlib-jdk8-sources.jar!/" />
+      <root url="file://$PROJECT_DIR$/../java install/kotlinx.coroutines-master" />
+      <root url="file://$PROJECT_DIR$/../java install/kotlinx.coroutines-master/benchmarks/src/jmh/java" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlinx-coroutines-core-1.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/kotlinx-coroutines-core-1.5.1.jar!/" />
     </SOURCES>
+    <jarDirectory url="jar://$PROJECT_DIR$/lib/kotlinx-coroutines-core-1.5.1.jar!/" recursive="false" />
+    <jarDirectory url="jar://$PROJECT_DIR$/lib/kotlinx-coroutines-core-1.5.1.jar!/" recursive="false" type="SOURCES" />
   </library>
 </component>

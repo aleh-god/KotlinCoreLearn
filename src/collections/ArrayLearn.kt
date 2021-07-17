@@ -18,5 +18,4 @@ fun main(args: Array<String>) {
     val array = Array(5) { i -> i * i }
     array.forEach { print(" $it") }
 
-
 }
