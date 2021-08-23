@@ -7,8 +7,8 @@ suspend fun main() = coroutineScope{
 
     val message: Deferred<String> = async{ getMessageT()}        // async запускает отдельную корутину, которая выполняется параллельно с остальными корутинами
 
-    for (i in 1..10) {
-        delay(50)
+    for (i in 1..3) {
+        delay(100)
         println("main: delay ${i * 50}")
     }
 
@@ -18,7 +18,7 @@ suspend fun main() = coroutineScope{
 
 suspend fun getMessageT() : String{
     for (i in 1..5) {
-        delay(50)
+        delay(100)
         println("getMessage: delay ${i * 50}")
     }
     return "Hello"
