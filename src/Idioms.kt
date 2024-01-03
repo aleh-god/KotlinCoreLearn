@@ -1,5 +1,3 @@
-package com.learnxinyminutes.kotlin
-
 import java.lang.IllegalArgumentException
 
 fun main(args: Array<String>) {

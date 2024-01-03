@@ -122,7 +122,7 @@ In Kotlin, the default implementation of List is ArrayList which you can think o
 
     println("\n\nExtension Properties: .indices .lastIndex")
 
-    // class IntRange : IntProgression, ClosedRange<Int> // A range of values of type Int.
+    // class IntRange : IntProgression, ClosedRange<Int> // KotlinRu.A range of values of type Int.
     val intRangeList: IntRange = numberList.indices
     println("intRangeList.isEmpty() is ${intRangeList.isEmpty()}")
     println("Диапазон индексов заданного List = ${ numberList.indices }")
@@ -231,7 +231,7 @@ In Kotlin, the default implementation of List is ArrayList which you can think o
     // keySelector: (T) -> K - это переменная для лямбды, соотв типа.
     // valueTransform: (T) -> V - это переменная для лямбды, соотв типа
     var scientists = listOf(Person("Grace", "Hopper"), Person("Jacob", "Bernoulli"), Person("Johann", "Bernoulli"))
-    val byLastNameBY = scientists.associateBy { it.lastName } // lastName - ключ, значение - Person
+    val byLastNameBY = scientists.associateBy { it.lastName } // lastName - ключ, значение - collections.Person
     println(byLastNameBY)
 
     println(".associateByTo(T, K, V, M) - Populates and returns the destination mutable map with key-value pairs, where key is provided by the keySelector function and and value is provided by the valueTransform function applied to elements of the given collection.")
@@ -319,7 +319,7 @@ In Kotlin, the default implementation of List is ArrayList which you can think o
     // Returns a list containing only distinct elements from the given array.
     // Возвращает список, содержащий только отдельные элементы из данного массива.
     val listD = listOf('a', 'A', 'b', 'B', 'A', 'a')
-    println(listD.distinct()) // [a, A, b, B]
+    println(listD.distinct()) // [a, KotlinRu.A, b, KotlinRu.B]
     println(listD.distinctBy { it.uppercaseChar() }) // [a, b]
 
     // Returns a list containing all elements except first n elements.

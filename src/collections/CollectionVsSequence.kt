@@ -1,4 +1,4 @@
-package com.learnxinyminutes.kotlin.collections
+package collections
 
 fun main(args: Array<String>) {
 
@@ -6,10 +6,11 @@ fun main(args: Array<String>) {
     val letters = listOf('a', 'A', 'b', 'B', 'A', 'a')
 
     val people = listOf(                                                     // 2
-        Person("John", "Boston", "+1-888-123456"),
-        Person("Sarah", "Munich", "+49-777-789123"),
-        Person("Svyatoslav", "Saint-Petersburg", "+7-999-456789"),
-        Person("Vasilisa", "Saint-Petersburg", "+7-999-123456"))
+        Person("John", "Boston", 56),
+        Person("Sarah", "Munich", 23),
+        Person("Svyatoslav", "Saint-Petersburg", 89),
+        Person("Vasilisa", "Saint-Petersburg", 56)
+    )
 
     // Kotlin из коробки предоставляет два способа обработки данных: энергичный для Collection и ленивый для Sequence.
     // Разница между ленивыми и энергичными вычислениями в том, когда они происходят. Коллекция трансформируется энергично.
@@ -27,7 +28,7 @@ fun main(args: Array<String>) {
 
     //map, distinct, groupBy и т.д. — промежуточные, возвращают Sequence.
 
-    println(letters.distinct()) // [a, A, b, B]
+    println(letters.distinct()) // [a, KotlinRu.A, b, KotlinRu.B]
     println(numbers.map { it * it }) // [1, 4, 9]
 
     val words = listOf("a", "abc", "ab", "def", "abcd")
@@ -36,7 +37,7 @@ fun main(args: Array<String>) {
     println(byLength.keys) // [1, 3, 2, 4]
     println(byLength.values) // [[a], [abc, def], [ab], [abcd]]
 
-    val peopleCities = people.groupBy(Person::city, Person::name)            // 5
+    val peopleCities = people.groupBy(Person::lastName, Person::name)            // 5
 
     //first, toList, count и т.д. — терминальные, не возвращают Sequence.
 
@@ -67,5 +68,3 @@ fun main(args: Array<String>) {
 
      */
 }
-
-data class Person(val name: String, val city: String, val phone: String)

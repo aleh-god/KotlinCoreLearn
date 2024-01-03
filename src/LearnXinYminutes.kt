@@ -7,9 +7,9 @@ Multi-line comments look like this.
 package com.learnxinyminutes.kotlin
 
 /*
-The entry point to a Kotlin program is a function named "main".
+The entry point to a Kotlin program is a function named "KotlinRu.collections.main".
 The function is passed an array containing any command-line arguments.
-Since Kotlin 1.3 the "main" function can also be defined without
+Since Kotlin 1.3 the "KotlinRu.collections.main" function can also be defined without
 any parameters.
 */
 fun main(args: Array<String>) {
@@ -40,7 +40,7 @@ fun main(args: Array<String>) {
     println(bazString)
 
     /*
-    A raw string is delimited by a triple quote (""").
+    KotlinRu.A raw string is delimited by a triple quote (""").
     Raw strings can contain newlines and any other characters.
     */
     val fooRawString = """
@@ -52,14 +52,14 @@ fun helloWorld(val name : String) {
 
     /*
     Strings can contain template expressions.
-    A template expression starts with a dollar sign ($).
+    KotlinRu.A template expression starts with a dollar sign ($).
     */
     val fooTemplateString = "$fooString has ${fooString.length} characters"
     println(fooTemplateString) // => My String Is Here! has 18 characters
 
     /*
     For a variable to hold null it must be explicitly specified as nullable.
-    A variable can be specified as nullable by appending a ? to its type.
+    KotlinRu.A variable can be specified as nullable by appending a ? to its type.
     We can access a nullable variable by using the ?. operator.
     We can use the ?: operator to specify an alternative value to use
     if a variable is null.
@@ -85,7 +85,7 @@ fun helloWorld(val name : String) {
     println(hello()) // => Hello, world!
 
     /*
-    A function parameter may be marked with the "vararg" keyword
+    KotlinRu.A function parameter may be marked with the "vararg" keyword
     to allow a variable number of arguments to be passed to the function.
     */
     fun varargExample(vararg names: Int) {
@@ -198,7 +198,7 @@ fun helloWorld(val name : String) {
     // Elements of a list can be accessed by their index.
     println(fooList[1]) // => b
 
-    // A mutable list can be created using the "mutableListOf" function.
+    // KotlinRu.A mutable list can be created using the "mutableListOf" function.
     val fooMutableList = mutableListOf("a", "b", "c")
     fooMutableList.add("d")
     println(fooMutableList.last()) // => d
@@ -246,7 +246,7 @@ fun helloWorld(val name : String) {
         .mapKeys {if (it.key) "even" else "odd"}
     println(z) // => {odd=[3, 9, 15], even=[6, 12, 18]}
 
-    // A "for" loop can be used with anything that provides an iterator.
+    // KotlinRu.A "for" loop can be used with anything that provides an iterator.
     for (c in "hello") {
         println(c)
     }
@@ -340,7 +340,7 @@ fun helloWorld(val name : String) {
 enum class EnumExampleX {
     A, B, C // Enum constants are separated with commas.
 }
-fun printEnum() = println(EnumExample.A) // => A
+fun printEnum() = println(EnumExample.A) // => KotlinRu.A
 
 // Since each enum is an instance of the enum class, they can be initialized as:
 enum class EnumExample(val value: Int) {
@@ -351,7 +351,7 @@ enum class EnumExample(val value: Int) {
 fun printProperty() = println(EnumExample.A.value) // => 1
 
 // Every enum has properties to obtain its name and ordinal(position) in the enum class declaration:
-fun printName() = println(EnumExample.A.name) // => A
+fun printName() = println(EnumExample.A.name) // => KotlinRu.A
 fun printPosition() = println(EnumExample.A.ordinal) // => 0
 
 /*
@@ -385,51 +385,51 @@ var b: String? = "abc"
 val l = b!!.length
 
 data class Counter(var value: Int) {
-    // overload Counter += Int
+    // overload KotlinRu.Counter += Int
     operator fun plusAssign(increment: Int) {
         this.value += increment
     }
 
-    // overload Counter++ and ++Counter
+    // overload KotlinRu.Counter++ and ++KotlinRu.Counter
     operator fun inc() = Counter(value + 1)
 
-    // overload Counter + Counter
+    // overload KotlinRu.Counter + KotlinRu.Counter
     operator fun plus(other: Counter) = Counter(this.value + other.value)
 
-    // overload Counter * Counter
+    // overload KotlinRu.Counter * KotlinRu.Counter
     operator fun times(other: Counter) = Counter(this.value * other.value)
 
-    // overload Counter * Int
+    // overload KotlinRu.Counter * Int
     operator fun times(value: Int) = Counter(this.value * value)
 
-    // overload Counter in Counter
+    // overload KotlinRu.Counter in KotlinRu.Counter
     operator fun contains(other: Counter) = other.value == this.value
 
-    // overload Counter[Int] = Int
+    // overload KotlinRu.Counter[Int] = Int
     operator fun set(index: Int, value: Int) {
         this.value = index + value
     }
 
-    // overload Counter instance invocation
+    // overload KotlinRu.Counter instance invocation
     operator fun invoke() = println("The value of the counter is $value")
 
 }
 /* You can also overload operators through extension methods */
-// overload -Counter
+// overload -KotlinRu.Counter
 operator fun Counter.unaryMinus() = Counter(-this.value)
 
 fun operatorOverloadingDemo() {
     var counter1 = Counter(0)
     var counter2 = Counter(5)
     counter1 += 7
-    println(counter1) // => Counter(value=7)
-    println(counter1 + counter2) // => Counter(value=12)
-    println(counter1 * counter2) // => Counter(value=35)
-    println(counter2 * 2) // => Counter(value=10)
+    println(counter1) // => KotlinRu.Counter(value=7)
+    println(counter1 + counter2) // => KotlinRu.Counter(value=12)
+    println(counter1 * counter2) // => KotlinRu.Counter(value=35)
+    println(counter2 * 2) // => KotlinRu.Counter(value=10)
     println(counter1 in Counter(5)) // => false
     println(counter1 in Counter(7)) // => true
     counter1[26] = 10
-    println(counter1) // => Counter(value=36)
+    println(counter1) // => KotlinRu.Counter(value=36)
     counter1() // => The value of the counter is 36
-    println(-counter2) // => Counter(value=-5)
+    println(-counter2) // => KotlinRu.Counter(value=-5)
 }

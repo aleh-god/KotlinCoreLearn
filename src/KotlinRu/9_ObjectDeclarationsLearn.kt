@@ -1,10 +1,4 @@
-package com.learnxinyminutes.kotlin.KotlinRu
-
-import java.awt.event.MouseAdapter
-import java.awt.event.MouseEvent
-import javax.swing.JComponent
-import kotlin.test.assertEquals
-
+package KotlinRu
 
 fun main(args: Array<String>) {
     val publicMain = "I am publicMain"
@@ -13,12 +7,12 @@ fun main(args: Array<String>) {
     // Отдельные сущности, сами по себе. Как если бы написали класс, создали синглтон и использовали
 
 
-    assertEquals(42, SimpleSingleton.answer)
-    assertEquals("Hello, world!", SimpleSingleton.greet("world"))
+    println(SimpleSingleton.answer)
+    println(SimpleSingleton.greet("world"))
 
     Counter.increment()
     println(Counter.currentCount())
-    // println(Counter.count) // this will fail to compile
+    // println(KotlinRu.Counter.count) // this will fail to compile
 
     val strings = listOf("Hello", "World")
     val sortedStrings = strings.sortedWith(ReverseStringComparator)
@@ -27,8 +21,8 @@ fun main(args: Array<String>) {
     // Companion objects всегда объявляется внутри другого класса.
     // Хотя у него может быть имя, оно не обязательно, и в этом случае оно автоматически получает имя Companion:
 
-    assertEquals("You can see me", OuterClass.publicCompanion)
-    // assertEquals("You can't see me", OuterClass.secretCompanion) // Cannot access 'secret'
+    println(OuterClass.publicCompanion)
+    // assertEquals("You can't see me", KotlinRu.OuterClass.secretCompanion) // Cannot access 'secret'
     val outerClass = OuterClass()
     outerClass.getSecretValue()
     outerClass.takeInfoFromCompanion()
@@ -74,7 +68,7 @@ interface B {
 object PlusAB : A(1), B {
 
     override fun printInfo() {
-        println("class A to $y")
+        println("class KotlinRu.A to $y")
         // println(xxx) // Нет доступа к закрытому полю
     }
 }
@@ -116,7 +110,7 @@ class OuterClass {
 
         // Без объекта класса доступа к полям нет
         fun takeInfoFromClass() {
-            // println(secretClass) // unresolved reference
+//             println(secretClass) // unresolved reference
             // println(publicClass) // unresolved reference
             print("I am companion fun")
         }

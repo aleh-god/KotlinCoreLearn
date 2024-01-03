@@ -1,6 +1,8 @@
-package com.learnxinyminutes.kotlin.KotlinRu.ObjectLearn
+package KotlinRu.ObjectLearn
 
-fun main(args: Array<String>) {
+import com.learnxinyminutes.kotlin.KotlinRu.ObjectLearn.Counter
+
+fun anonymObjects() {
 
     val publicMain = "I am publicMain"
 

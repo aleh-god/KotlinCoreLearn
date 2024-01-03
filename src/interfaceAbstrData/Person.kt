@@ -21,7 +21,7 @@ class Employee: Person{                         // Для определения
 
     // Если производный класс не имеет явного первичного конструктора, то работаем через вторичный
     constructor(name: String, comp: String) :    // Сука, это не свойства! А параметры передаваемые в конструктор
-            super(name){                        // Класс Person через первичный конструктор устанавливает свойство name.
+            super(name){                        // Класс collections.Person через первичный конструктор устанавливает свойство name.
         company = comp
     }
 }
@@ -33,6 +33,6 @@ fun main(args: Array<String>) {
     println("alice.name = ${alice.name}")
 
     val kate: Employee = Employee("Kate", "Google")
-    // Причем поскольку объект Employee в то же время является и объектом класса Person в силу отношения наследования, то мы можем переменной типа Person передать объект Employee:
+    // Причем поскольку объект Employee в то же время является и объектом класса collections.Person в силу отношения наследования, то мы можем переменной типа collections.Person передать объект Employee:
     val liza: Person = Employee("Liza", "Apple")
 }

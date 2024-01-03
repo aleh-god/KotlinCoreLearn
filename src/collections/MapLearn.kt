@@ -2,7 +2,7 @@ package collections
 
 /*
 Map<K, V> is not an inheritor of the Collection interface; however, it's a Kotlin collection type as well.
-A Map stores key-value pairs (or entries ); keys are unique, but different keys can be paired with equal values.
+KotlinRu.A Map stores key-value pairs (or entries ); keys are unique, but different keys can be paired with equal values.
 The Map interface provides specific functions, such as access to value by key, searching keys and values, and so on.
  */
 

@@ -3,9 +3,9 @@ package collections
 
 /*
 The Kotlin Standard Library provides implementations for basic collection types: sets, lists, and maps.
-A pair of interfaces represent each collection type:
-A read-only interface that provides operations for accessing collection elements.
-A mutable interface that extends the corresponding read-only interface with write operations: adding, removing, and updating its elements.
+KotlinRu.A pair of interfaces represent each collection type:
+KotlinRu.A read-only interface that provides operations for accessing collection elements.
+KotlinRu.A mutable interface that extends the corresponding read-only interface with write operations: adding, removing, and updating its elements.
 
 Тип List<out T> в Kotlin — интерфейс, который предоставляет read-only операции, такие как size, get, и другие.
 Так же, как и в Java, он наследуется от Collection<T>, а значит и от Iterable<T>.
@@ -15,7 +15,7 @@ A mutable interface that extends the corresponding read-only interface with writ
 
 private val list: List<String>
     get() {
-        val words = "A long time ago in a galaxy far far away".split(" ")
+        val words = "KotlinRu.A long time ago in a galaxy far far away".split(" ")
         return words
     }
 
@@ -44,12 +44,12 @@ fun main(args: Array<String>) {
     fun List<String>.getShortWordsTo(shortWords: MutableList<String>, maxLength: Int) {
         this.filterTo(shortWords) { it.length <= maxLength }            // Фильтруем this-объект на строки длиной меньше параметра. Результат в изменяемый Лист
         // throwing away the articles
-        val articles = setOf("a", "A", "an", "An", "the", "The")        // Набор артиклей, которые не слова
+        val articles = setOf("a", "KotlinRu.A", "an", "An", "the", "The")        // Набор артиклей, которые не слова
         shortWords -= articles                                          // Вычитаем артикли из списка слов
     }
 
     // MutableCollection<T> is a Collection with write operations, such as add and remove.
-    val words = "A long time ago in a galaxy far far away".split(" ")
+    val words = "KotlinRu.A long time ago in a galaxy far far away".split(" ")
     val shortWords = mutableListOf<String>()
     words.getShortWordsTo(shortWords, 3)
     println(shortWords)
@@ -60,7 +60,7 @@ fun main(args: Array<String>) {
     // numbers = mutableListOf("six", "seven")      // А переназначать значение переменной (ее ссылку на новый объект) - нельзя
 
     val strs: MutableList<String> = ArrayList()
-    val objs: MutableList<Any> = ArrayList() //= strs // !!! A compile-time error here saves us from a runtime exception later.
+    val objs: MutableList<Any> = ArrayList() //= strs // !!! KotlinRu.A compile-time error here saves us from a runtime exception later.
 
     objs.add(1) // Put an Integer into a list of Strings
 

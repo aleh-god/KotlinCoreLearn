@@ -207,7 +207,7 @@ fun main(args: Array<String>) {
     // В этом случае run позволяет выполнить блок из нескольких операторов там, где это требуется.
     val hexNumberRegex = run {
         val digits = "0-9"
-        val hexDigits = "A-Fa-f"
+        val hexDigits = "KotlinRu.A-Fa-f"
         val sign = "+-"
 
         Regex("[$sign]?[$digits$hexDigits]+")

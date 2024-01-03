@@ -23,8 +23,8 @@ fun main(args: Array<String>) {
     // поскольку на их основании вычисляет хеш-код, который используется в качестве ключа объекта в такой коллекции как HashMap.
 
     val alice: PersonData = PersonData("Alice", 24)
-    println(alice.toString())           // Person@2a18f23c если обычный class
-                                        // Person(name=Alice, age=24) если data class
+    println(alice.toString())           // collections.Person@2a18f23c если обычный class
+                                        // collections.Person(name=Alice, age=24) если data class
 
     // Опять же компилятор генерирует функцию копирования по умолчанию, которую мы можем использовать.
     val kate = alice.copy()  // copy() копирование данных:
@@ -33,8 +33,8 @@ fun main(args: Array<String>) {
 
     // Если мы хотим, чтобы некоторые данные у объкта отличались, то мы их можем указать в функции copy в виде именованных арументов, как в случае со свойством name в примере выше.
     val jon = alice.copy(name = "Jon")
-    println(alice.toString())   // Person(name=Alice, age=24)
-    println(jon.toString())    // Person(name=Kate, age=24)
+    println(alice.toString())   // collections.Person(name=Alice, age=24)
+    println(jon.toString())    // collections.Person(name=Kate, age=24)
 
 
 }
