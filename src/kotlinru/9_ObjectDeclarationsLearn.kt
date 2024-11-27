@@ -1,4 +1,4 @@
-package KotlinRu
+package kotlinru
 
 fun main(args: Array<String>) {
     val publicMain = "I am publicMain"
@@ -121,5 +121,16 @@ class StaticClass {
     companion object {
         @JvmStatic
         val staticField = 42
+    }
+
+    private val key = "private_key"
+
+    fun getWord() = InnerClass().word
+
+    inner class InnerClass() {
+
+        val word = "CAN_NOT_use_private_word"
+
+        fun getKey() = StaticClass().key
     }
 }

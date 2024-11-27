@@ -1,4 +1,4 @@
-package KotlinRu.ObjectLearn
+package kotlinru.objectlearn
 
 import com.learnxinyminutes.kotlin.KotlinRu.ObjectLearn.Counter
 
