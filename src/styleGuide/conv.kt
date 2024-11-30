@@ -1,4 +1,4 @@
-package StyleGuide
+package styleGuide
 
 fun main(args: Array<String>) {
 

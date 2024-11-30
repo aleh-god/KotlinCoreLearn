@@ -1,4 +1,4 @@
-package Family
+package family
 
 interface Mother {
     fun love() : String

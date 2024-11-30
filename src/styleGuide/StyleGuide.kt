@@ -1,4 +1,4 @@
-package StyleGuide
+package styleGuide
 
 /*
 Все исходные файлы должны иметь UTF-8 кодировку.

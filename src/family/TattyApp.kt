@@ -1,4 +1,4 @@
-package Family
+package family
 
 fun main(args: Array<String>) {
 
@@ -7,5 +7,4 @@ fun main(args: Array<String>) {
 
     val nameFather : String = father.name
     val nameSon : String = son.name
-
 }
