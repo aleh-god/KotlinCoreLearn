@@ -160,7 +160,7 @@ fun main(args: Array<String>) {
     // Чтобы определить новую переменную для контекстного объекта, укажите ее имя в качестве аргумента лямбды, чтобы ее можно было использовать вместо ключевого слова it.
     val modifiedFirstItem = numbers.first().let {
             firstItem -> println("Первый элемент в списке: '$firstItem'")
-            if (firstItem.length >= 5) firstItem else "!" + firstItem + "!"
+            if (firstItem.length >= 5) firstItem else "!$firstItem!"
     }.toUpperCase()
     println("Первый элемент списка после изменений: '$modifiedFirstItem'")
 
@@ -264,6 +264,28 @@ fun main(args: Array<String>) {
 
     displaySubstringPosition("010000011", "11")
     displaySubstringPosition("010000011", "12")
+
+    var size = 0
+
+    // it - контекст
+    size = "Hello".let {
+        println(it)
+        it.length
+    }
+
+    size = "Hello".also {
+        println(it)
+    }.length
+
+    // this - объект приемник
+    size = "Hello".run {
+        println(this)
+        this.length
+    }
+
+    size = "Hello".apply {
+        println(this)
+    }.length
 
 }
 
